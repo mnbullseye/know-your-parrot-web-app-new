@@ -94,6 +94,39 @@ button.join{
   cursor: default;
 }
 
+.btn {
+  color: var(--heading1-clr);
+  background-color: var(--pastel-yellow-green);
+  border: 5px solid var(--light-green);
+  font-family: var(--btn-text);
+  font-weight: bold;
+  font-size: clamp(13px, 2.5vw, 14px);
+  border-radius: 20px;
+  height: 50px;
+  width: 100%;
+  max-width: 200px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--heading1-clr);
+  color: var(--btn-text-clr);
+}
+
+@media (max-width: 480px) {
+    .btn {
+    max-width: 100%;
+    height: 45px;
+  }
+}
+
+@media (max-width: 360px) {
+  .btn {
+    height: 40px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #main {
     max-width: 85%;

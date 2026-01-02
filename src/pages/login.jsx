@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Button from "../components/Button.jsx";
 import './SignupLoginStyle.css'
 import { useState } from "react";
 
@@ -8,15 +7,26 @@ function Login () {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
+    // 1. Validation
     if (!email.includes('@')) {
-      alert("Email Error: Please enter a valid email address.");
+      alert("Please enter a valid email.");
       return;
     }
-    if (!/[A-Z]/.test(password)) {
-        alert("Password Error: Your password must contain at least one capital letter.");
-        return;
+
+    // 2. Get users from "Database"
+    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+    // 3. Find matching user
+    const user = existingUsers.find(u => u.email === email && u.password === password);
+
+    if (user) {
+      alert("Login Successful!");
+      // Optional: Save the "logged in" state
+      localStorage.setItem('currentUser', JSON.stringify(user));
+      navigate("/");
+    } else {
+      alert("Invalid email or password.");
     }
-    alert("Validation Successful! Submitting form...");
   };
 
   return(
@@ -48,7 +58,7 @@ function Login () {
 
       <Link to="/" id="forgot">Forgot Password?</Link>
 
-      <button className="btn">{label.trim()}</button>
+      <button className="btn" onClick={handleLogin}>Submit</button>
     </div>
   )
 }
