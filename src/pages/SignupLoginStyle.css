@@ -1,0 +1,140 @@
+@import url("../ProjectAssets.css");
+
+* {
+  box-sizing: border-box;
+}
+
+#main {
+  background-color: var(--heading1-clr);
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px 30px; 
+  border-radius: 25px;
+  width: 100%;           
+  max-width: 500px;
+}
+
+h1 {
+  color: var(--bg-clr);
+  font-family: var(--side-notes);
+  font-weight: bold;
+  font-size: clamp(24px, 5vw, 36px);
+  margin: 0 0 15px 0;
+}
+section, .cont, #btn {
+  width: 450px;
+  margin: 8px 0;
+  border-radius: 8px;
+}
+
+section {
+  background-color: var(--light-green);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cont {
+  background-color: var(--light-green);
+  color: var(--heading1-clr);
+  display: flex;
+  border-radius: 8px;
+  padding: 12px 15px;
+  font-weight: 80;
+  font-size: clamp(13px, 2.5vw, 14px);
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.cont::placeholder {
+  opacity: 1;
+  color: #333;
+  font-weight: 500;
+}
+
+.cont:focus {
+  background-color: var(--pastel-green);
+  outline: none;
+}
+
+a {
+  color: var(--pastel-green);
+  font-family: var(--sub-heading);
+  font-size: clamp(14px, 2.5vw, 16px);
+  margin-bottom: 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--heading1-clr);
+}
+
+button.join{
+  background-color: var(--pastel-green)  !important;
+}
+
+#log, #sign {
+  font-family: var(--sub-heading);
+  cursor: pointer;
+  border: none;
+  flex: 1;
+  padding: 12px 10px;
+  border-radius: 8px;
+  font-size: clamp(13px, 2.5vw, 15px);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+#forgot:hover{
+  color: var(--text-subheading-clr);
+  cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+  #main {
+    max-width: 85%;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px; 
+  }
+
+  #main {
+    max-width: 95%;
+    padding: 25px 15px;
+    border-radius: 15px;
+  }
+
+  section {
+    flex-direction: column;
+    gap: 10px;
+    background: transparent;
+  }
+
+  #log, #sign {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .cont {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  body {
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+}
