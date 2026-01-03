@@ -1,0 +1,105 @@
+@import url("../ProjectAssets.css");
+
+.add-to-cart{
+    padding: 0px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--pastel-green);
+    color: white;
+    font-family: var(--sub-heading);
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: var(--grey-green); 
+}
+.add-to-cart i{
+  margin-right: 12px;
+}
+
+a{
+  color: var(--heading1-clr);
+  font-family: var(--sub-heading);
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+a:hover{
+  color: var(--light-green);
+  cursor: pointer;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-right: 5%;
+}
+.pro-description i {
+  font-size: 20px;
+  color: var(--light-green);
+  margin-left: 10px;
+  align-self: flex-start;
+}
+.pro-description i:hover{
+  color: var(--grey-green);
+}
+.pro-description{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+
+}
+.product img {
+  max-width: 100%;
+  height: 180px;
+  object-fit: fill;
+  border-radius: 10px;
+  border: 5px solid var(--heading1-clr);
+}
+
+.product{
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 3px solid var(--light-green);
+  padding: 12px;
+}
+.product:hover{
+  box-shadow: 10px 10px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1024px) {
+
+  .product img {
+    height: 160px;
+  }
+  a{font-size: 25px;}
+  p{font-size: 20px;}
+
+}
+@media (max-width: 768px) {
+
+  .product img {
+    height: 150px;
+  }
+  a{font-size: 25px;}
+  p{font-size: 20px;}
+
+}
+@media (max-width: 480px) {
+
+  .product img {
+    height: 140px;
+  }
+  a{font-size: 25px;}
+  p{font-size: 20px;}
+
+}
