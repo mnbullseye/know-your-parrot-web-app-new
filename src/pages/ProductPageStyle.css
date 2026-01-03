@@ -1,0 +1,93 @@
+@import url("../ProjectAssets.css");
+
+main{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px; /* limits how wide the grid can grow */
+  margin: 0 auto; /* centers it horizontally */
+  justify-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+.intro{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 40px 20px;
+}
+h1{
+  color: var(--heading1-clr);
+  font-family: var(--main-heading);
+  font-weight: bold;
+  font-size: 4rem;
+  padding-top: 0;
+  padding-right: 35px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+h2{
+  color: var(--text-subheading-clr);
+  font-family: var(--side-notes);
+  font-weight: bold;
+  padding-top: 0;
+  font-size: 3rem;
+  padding-left: 35px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+@media (max-width: 1024px) {
+
+    h1 {
+    font-size: 50px;
+    padding-right: 30px;
+  }
+
+  h2 {
+    font-size: 35px;
+    padding-left: 30px;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 90%;
+  }
+
+}
+@media (max-width: 768px) {
+
+    h1 {
+    font-size: 50px;
+    padding-right: 30px;
+  }
+
+  h2 {
+    font-size: 35px;
+    padding-left: 30px;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 95%;
+  }
+
+}
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 50px;
+    padding-right: 30px;
+  }
+
+  h2 {
+    font-size: 35px;
+    padding-left: 30px;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr;
+    max-width: 90%;
+  }
+
+}

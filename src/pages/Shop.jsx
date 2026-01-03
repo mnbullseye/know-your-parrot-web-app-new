@@ -14,8 +14,8 @@ const ShopPage = () => {
         <section className="category">
           {/* Category: Toys */}
           <div className="cat">
-            <Link to="/shop-toys" id="img1"></Link>
-            <Link to="/shop-toys">
+            <Link to="/shop/toys" id="img1"></Link>
+            <Link to="/shop/toys">
               <button>Toys</button>
             </Link>
             <p>Play time!</p>
@@ -23,8 +23,8 @@ const ShopPage = () => {
 
           {/* Category: Food */}
           <div className="cat">
-            <Link to="/shop-food" id="img2"></Link>
-            <Link to="/shop-food">
+            <Link to="/shop/food" id="img2"></Link>
+            <Link to="/shop/food">
               <button>Food</button>
             </Link>
             <p>Rawr!! I'm hungry</p>
@@ -32,8 +32,8 @@ const ShopPage = () => {
 
           {/* Category: Accessories */}
           <div className="cat">
-            <Link to="/shop-accessories" id="img3"></Link>
-            <Link to="/shop-accessories">
+            <Link to="/shop/accessories" id="img3"></Link>
+            <Link to="/shop/accessories">
               <button>Accessories</button>
             </Link>
             <p>Human, decorate my cage</p>
