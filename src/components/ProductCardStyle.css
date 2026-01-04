@@ -1,6 +1,6 @@
 @import url("../ProjectAssets.css");
 
-.add-to-cart{
+.add-to-cart-btn{
     padding: 0px;
     border: none;
     border-radius: 5px;
@@ -13,7 +13,7 @@
     transition: background-color 0.3s ease;
 }
 
-.add-to-cart:hover {
+.add-to-cart-btn:hover {
     background-color: var(--grey-green); 
 }
 .add-to-cart i{

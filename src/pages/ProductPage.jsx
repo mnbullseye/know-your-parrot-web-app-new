@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import productsData from '../products.json'; // Direct import or fetch
 import ProductCard from '../components/ProductCard';
+import './ProductPageStyle.css';
 
 const ShopPage = () => {
   // 1. Get the category from the URL (e.g., /shop/:category)
@@ -31,7 +32,7 @@ const ShopPage = () => {
         <h2>{currentTitle.h2}</h2>
       </section>
 
-      <main id="products-container" className="products-grid">
+      <main className="products-grid">
         {products.map(product => (
           <ProductCard 
             key={product.id} 
