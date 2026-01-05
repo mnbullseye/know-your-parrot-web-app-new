@@ -11,6 +11,7 @@ main {
   align-items: center;
   width: 100%;
   padding: 0 20px;
+  overflow: visible;
 }
 
 h1 {
@@ -118,15 +119,15 @@ p {
 }
 
 #img1 {
-  background-image: url("Shop Assets/toys.png");
+  background-image: url("./toys.png");
 }
 
 #img2 {
-  background-image: url("Shop Assets/food.png");
+  background-image: url("./food.png");
 }
 
 #img3 {
-  background-image: url("Shop Assets/accessories.png");
+  background-image: url("./accessories.png");
 }
 
 /* --- Tablet Styles (Small Desktop / Tablets) --- */

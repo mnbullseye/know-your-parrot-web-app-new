@@ -9,29 +9,31 @@ function Signup () {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSignup = () => {
-    const { email, password, checkPassword } = formData;
+  const handleSignup = async () => {
+    const { email, password, confirmPassword } = formData;
 
-    // Basic Validations
-    if (email == '' || password == '') return alert("Fields cannot be empty");
-    if (password !== checkPassword) return alert("Passwords do not match!");
+    if (password.trim !== confirmPassword.trim) return alert("Passwords do not match");
 
-    // 1. Get existing users (or an empty array if none exist)
-    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+    try {
+        // We use 'fetch' to send data to our server on Port 5000
+        const response = await fetch('http://localhost:5000/api/auth/signup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+        });
 
-    // 2. Check if user already exists
-    const userExists = existingUsers.some(user => user.email === email);
-    if (userExists) {
-      alert("User already exists! Please login.");
-      return;
+        const data = await response.json();
+
+        if (response.ok) {
+            alert(data.message);
+            navigate("/login");
+        } else {
+            alert(data.message || "Something went wrong");
+        }
+    } catch (error) {
+        console.error("Error during signup:", error);
+        alert("Server is not running!");
     }
-    // 3. Add new user and save
-    const newUser = { email, password };
-    existingUsers.push(newUser);
-    localStorage.setItem('users', JSON.stringify(existingUsers));
-
-    alert("Signup Successful!");
-    navigate("/login");
   };
 
   return(
