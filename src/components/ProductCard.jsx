@@ -15,7 +15,7 @@ function ProductCard({ product }) {
                     <p>Rs.{product.price}</p>
                 </span>
                 {/* This Link will eventually trigger your addToCart function */}
-                <button className="add-to-cart-btn" onClick={() => console.log("Added", product.id)}>
+                <button className="add-to-cart-btn" onClick={() => addToCart(product)}>
                     <i className="fa fa-shopping-cart"></i>
                 </button>
             </div>
