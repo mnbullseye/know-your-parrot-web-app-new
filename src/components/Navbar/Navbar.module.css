@@ -1,0 +1,64 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  background: var(--bg-clr);
+  box-shadow: 20px 0 10px rgba(0, 0, 0, 0.411);
+  transition: 0.3s ease-in-out;
+  padding: 2rem 0;
+  z-index: 1000;
+  border-top-right-radius: 20px;
+}
+
+.sidebar.show {
+  left: 0;
+}
+
+.navLinks {
+  list-style: none;
+  margin-top: 2rem;
+  padding: 0;
+}
+
+.navLinks li {
+  padding: 20px;
+  transition: padding-left 300ms ease-in;
+}
+
+.navLinks li:hover {
+  background-color: white;
+  border-left: 8px solid var(--light-green);
+  padding-left: 10%;
+}
+
+.navLinks a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: var(--sub-heading);
+  color: var(--heading1-clr);
+}
+
+.navBtn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1100;
+  font-size: 2.8rem;
+  color: var(--heading1-clr);
+  cursor: pointer;
+}
+
+.navBtn.hide {
+    display: none;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: var(--heading1-clr);
+  cursor: pointer;
+}

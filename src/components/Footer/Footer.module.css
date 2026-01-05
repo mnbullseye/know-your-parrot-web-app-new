@@ -1,0 +1,66 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.footerParrotContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--bg-clr);
+}
+
+.footerParrotContainer div {
+    width: 50vw;
+    padding: 0px 15px;
+}
+
+.footerParrotImagesContainerLeft {
+    display: flex;
+    flex-direction: row;
+}
+
+.footerParrotImagesContainerRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.footer img {
+    width: 50px;
+    padding: 0px 5px;
+}
+
+.footerInfo {
+    height: 23vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--heading1-clr);
+    color: white;
+    font-family: var(--text);
+    letter-spacing: 1px;
+}
+
+.footerInfo a {
+    color: white;
+}
+
+.footerIcon {
+    font-size: 2rem;
+    margin: 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.footerIcon:hover {
+    font-size: 2.3rem;
+    color: var(--pastel-green);
+    cursor: pointer;
+}
+
+.footerInfo p {
+    margin-top: 15px;
+}

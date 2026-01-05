@@ -1,0 +1,113 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.title {
+  font-family: var(--main-heading);
+  color: var(--heading1-clr);
+  font-size: 4.5rem;
+  margin-top: 80px;
+  letter-spacing: 5px;
+}
+
+.cartWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.itemsContainer {
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 500px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 15px;
+}
+
+.item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.itemImg {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid var(--heading1-clr);
+}
+
+.countContainer {
+  background-color: var(--heading1-clr);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+  padding: 5px 10px;
+  margin: 10px 0;
+}
+
+.countContainer button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.summaryContainer {
+  border: 5px solid var(--heading1-clr);
+  border-radius: 20px;
+  padding: 20px;
+  width: 280px;
+  background-color: #f9fff0;
+  height: fit-content;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  font-family: var(--sub-heading);
+}
+
+.line {
+  border-bottom: 2px solid var(--heading1-clr);
+  margin: 10px 0;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.checkoutBtn {
+  width: 100%;
+  background-color: var(--heading1-clr);
+  color: white;
+  border: 3px solid var(--light-green);
+  padding: 10px;
+  border-radius: 10px;
+  font-family: var(--btn-text);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.checkoutBtn:hover:not(:disabled) {
+  background-color: white;
+  color: var(--heading1-clr);
+  border-color: var(--heading1-clr);
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .cartWrapper { flex-direction: column; }
+  .itemsContainer { width: 90vw; }
+}
