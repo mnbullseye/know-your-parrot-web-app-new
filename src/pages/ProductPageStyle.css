@@ -1,31 +1,44 @@
 @import url("../ProjectAssets.css");
 
 .shop-container {
+  display: flex;
+  flex-direction: column;
   background-color: var(--bg-clr);
   min-height: 100vh;
   padding-bottom: 50px;
+  min-width: 100vh;
+  overflow: visible;
+  align-items: center;
+  justify-content: center;
 }
 
 .products-grid{
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  max-width: 1000px; /* limits how wide the grid can grow */
+  width: 100%;
+  max-width: 1200px; /* limits how wide the grid can grow */
   margin: 0 auto; /* centers it horizontally */
   justify-items: center;
   justify-content: center;
   margin-bottom: 5%;
+  overflow: visible;
 }
 
-.intro{
-  background-color: var(--bg-clr);
+.intro {
   display: flex;
+  flex-direction: row; 
+  align-items: center;    
   justify-content: center;
+  background-color: var(--bg-clr);
   text-align: center;
-  margin: 40px 20px;
-  width: 100%;
-  overflow-x: visible;
+  margin: 0 auto;             
+  padding: 60px 20px; 
+  max-width: 1200px;   
+  width: 100%;           
 }
+
 h1{
   color: var(--heading1-clr);
   font-family: var(--main-heading);

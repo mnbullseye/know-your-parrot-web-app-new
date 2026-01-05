@@ -11,7 +11,6 @@ main {
   align-items: center;
   width: 100%;
   padding: 0 20px;
-  overflow: visible;
 }
 
 h1 {
@@ -51,14 +50,18 @@ h2 {
   background-color: var(--bg-clr);
   display: flex;
   flex-direction: row;
-  padding: 12px;
-  justify-content: space-evenly;
-  text-align: center;
+  flex-wrap: wrap; 
+  justify-content: space-evenly; 
+  gap: 20px; 
   width: 100%;
-  margin: 0 auto;
-  margin-bottom: 5%
+  max-width: 1200px; 
+  margin: 0 auto 5%;
 }
 
+.cat {
+  flex: 0 1 300px; 
+  min-width: 250px; 
+}
 .cat {
   background-color: var(--bg-clr);
   justify-content: center;
@@ -67,8 +70,8 @@ h2 {
   padding: 12px;
   border-radius: 20px;
   flex-direction: column;
-  flex: 1 1 250px;
-  min-width: 200px;
+  /* flex: 1 1 250px; */
+  /* min-width: 200px; */
   max-width: 300px;
 }
 
