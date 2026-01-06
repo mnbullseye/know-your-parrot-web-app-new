@@ -9,6 +9,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import Guides from './pages/Guides/Guides';
 import CockatielGuide from './pages/Guides/CockatielGuide';
+import CockatooGuide from './pages/Guides/CockatooGuide';
 import Cart from './pages/Cart/Cart';
 
 /**
@@ -38,6 +39,7 @@ function App() {
 
           {/* Individual Detailed Guide Page */}
           <Route path="/parrot-guide/cockatiel" element={<CockatielGuide />} />
+          <Route path="/parrot-guide/cockatoo" element={<CockatooGuide />} />
 
           {/* Shop/Products Page */}
           <Route path="/shop" element={<Shop />} />

@@ -46,7 +46,7 @@
   left: 1rem;
   z-index: 1100;
   font-size: 2.8rem;
-  color: var(--heading1-clr);
+  color: var(--text-subheading-clr);
   cursor: pointer;
 }
 
