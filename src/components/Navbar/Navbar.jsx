@@ -18,13 +18,10 @@ const Navbar = () => {
                 <ul className={styles.navLinks}>
                     <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
                     <li><Link to="/guides">Guides</Link></li>
-                    <li><Link to="/shop">Products</Link></li>
                     <li><Link to="/cart">Cart</Link></li>
-                    <li><Link to="/Contactus">Cart</Link></li>
-                    <li><Link to="/login">Cart</Link></li>
-                    <li><Link to="/signup">Cart</Link></li>
-                    <li><Link to="/description/:id">Cart</Link></li>
-                    <li><Link to="/shop/:category"></Link></li>
+                    <li><Link to="/Contactus">Contact us</Link></li>
+                    <li><Link to="/login">Login</Link></li>
+                    <li><Link to="/shop">Shop</Link></li>
                 </ul>
             </nav>
         </>

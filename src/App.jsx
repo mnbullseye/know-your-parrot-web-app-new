@@ -33,12 +33,10 @@ function App() {
           <Route path="/parrot-guide/cockatiel" element={<CockatielGuide />} />
           <Route path="/parrot-guide/cockatoo" element={<CockatooGuide />} />
 
-          <Route path="/shop" element={<Shop />} />
+          <Route path="/shop" element={<ShopPage />} />
 
           <Route path="/cart" element={<Cart />} />
           
-          <Route path="/" element={<ShopPage />} />
-
           <Route path="/shop/:category" element={<ProductPage />} />
 
           <Route path="/description/:id" element={<ProductDescription />} />
