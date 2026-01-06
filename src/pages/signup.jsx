@@ -37,8 +37,9 @@ function Signup () {
   };
 
   return(
-    <div id='main'>
-      <h1>Login/Signup</h1>
+    <div className="auth-cont">
+      <div id='main'>
+      <h1 className="headings">Login/Signup</h1>
 
       <section>
         <Link to="/login" id="log">Login</Link>
@@ -46,10 +47,11 @@ function Signup () {
       </section>
 
       <input id="Email" className="cont" name="email" type="text" required placeholder="Email Address" onChange={handleChange}/>
-      <input id="Password" className="cont" name="password" type="text" required minlength={8} placeholder="Password" onChange={handleChange}/>
-      <input id="ConfirmPassword" class="cont" type="text" name="checkPassword" required minlength="8" placeholder="Confirm Password" onChange={handleChange}/>
+      <input id="Password" className="cont" name="password" type="password" required minlength={8} placeholder="Password" onChange={handleChange}/>
+      <input id="ConfirmPassword" class="cont" type="password" name="checkPassword" required minlength="8" placeholder="Confirm Password" onChange={handleChange}/>
       
       <button className="btn" onClick={handleSignup}>Submit</button>
+    </div>
     </div>
   )
 }
