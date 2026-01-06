@@ -20,6 +20,11 @@ const Navbar = () => {
                     <li><Link to="/guides">Guides</Link></li>
                     <li><Link to="/shop">Products</Link></li>
                     <li><Link to="/cart">Cart</Link></li>
+                    <li><Link to="/Contactus">Cart</Link></li>
+                    <li><Link to="/login">Cart</Link></li>
+                    <li><Link to="/signup">Cart</Link></li>
+                    <li><Link to="/description/:id">Cart</Link></li>
+                    <li><Link to="/shop/:category"></Link></li>
                 </ul>
             </nav>
         </>
