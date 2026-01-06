@@ -1,65 +1,74 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './SignupLoginStyle.css'
 import { useState } from "react";
 
 function Login () {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate(); 
 
-  const handleLogin = () => {
-    // 1. Validation
+  const handleLogin = async () => {
     if (!email.includes('@')) {
       alert("Please enter a valid email.");
       return;
     }
 
-    // 2. Get users from "Database"
-    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+    try {
+      const response = await fetch('http://localhost:5000/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
 
-    // 3. Find matching user
-    const user = existingUsers.find(u => u.email === email && u.password === password);
+      const data = await response.json();
 
-    if (user) {
-      alert("Login Successful!");
-      // Optional: Save the "logged in" state
-      localStorage.setItem('currentUser', JSON.stringify(user));
-      navigate("/");
-    } else {
-      alert("Invalid email or password.");
+      if (response.ok) {
+        alert("Login Successful!");
+        // Store user info or a token
+        localStorage.setItem('userToken', data.token); 
+        navigate("/");
+      } else {
+        // This triggers if the user is not in the DB or password is wrong
+        alert(data.message || "Invalid email or password.");
+      }
+    } catch (error) {
+      console.error("Login error:", error);
+      alert("Server is not running!");
     }
   };
 
-  return(
-    <div id='main'>
-      <h1>Login/Signup</h1>
-      <section>
-        <button className="join" id="log">Login</button>
-        <Link to="/signup" id="sign">Signup</Link>
-      </section>
+  return (
+    <div className="auth-cont">
+      <div id='main'>
+        <h1 className="headings">Login/Signup</h1>
+        <section>
+          <button className="join" id="log">Login</button>
+          <Link to="/signup" id="sign">Signup</Link>
+        </section>
 
-      <input 
-        id="Email" 
-        className="cont" 
-        value= {email}
-        type="text" 
-        placeholder="Email Address"
-        onChange={(e) => setEmail(e.target.value)}
-      />
+        <input 
+          id="Email" 
+          className="cont" 
+          value={email}
+          type="email" 
+          placeholder="Email Address"
+          onChange={(e) => setEmail(e.target.value)}
+        />
 
-      <input 
-        id="Password" 
-        className="cont" 
-        value={password}
-        type="text" 
-        minlength={8} 
-        placeholder="Password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
+        <input 
+          id="Password" 
+          className="cont" 
+          value={password}
+          type="password" 
+          placeholder="Password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
-      <Link to="/" id="forgot">Forgot Password?</Link>
-
-      <button className="btn" onClick={handleLogin}>Submit</button>
+        <Link to="/" id="forgot">Forgot Password?</Link>
+        <button className="btn" onClick={handleLogin}>Submit</button>
+      </div>
     </div>
-  )
+  );
 }
+
 export default Login;

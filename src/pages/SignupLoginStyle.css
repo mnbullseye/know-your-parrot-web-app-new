@@ -1,7 +1,13 @@
-@import url("../ProjectAssets.css");
 
 * {
   box-sizing: border-box;
+}
+
+.auth-cont{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 #main {
@@ -17,7 +23,7 @@
   max-width: 500px;
 }
 
-h1 {
+.headings {
   color: var(--bg-clr);
   font-family: var(--side-notes);
   font-weight: bold;
@@ -25,7 +31,7 @@ h1 {
   margin: 0 0 15px 0;
 }
 
-section, .cont, #btn {
+section, .cont, .btn {
   width: 100%;         
   max-width: 400px;    
   margin: 10px auto;   

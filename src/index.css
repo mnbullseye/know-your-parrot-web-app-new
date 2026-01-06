@@ -1,13 +1,37 @@
-body {
-  background-color: var(--bg-clr);
-  margin: 0;
-  padding: 0; 
-  overflow-x: hidden;
-  width: 100%;
+/* Import your Project Assets variables */
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Chewy&family=Lekton:ital,wght@0,400;0,700;1,400&family=Rochester&family=Sniglet:wght@400;800&display=swap');
+
+:root {
+  --bg-clr: #fff6ab;
+  --heading1-clr: #2a310b;
+  --text-subheading-clr: #546d46;
+  --btn-text-clr: #fef492;
+  --light-green: #90b25c;
+  --pastel-green: #ceeca2;
+  --pastel-yellow-green: #e0fa79;
+  --dark-yellow: #ffe55f;
+
+  --main-heading: 'chewy', system-ui;
+  --sub-heading: 'sniglet', system-ui;
+  --text: 'blinker', sans-serif;
+  --side-notes: 'Rochester', cursive;
+  --btn-text: 'lekton', monospace;
 }
 
-#root {
-  width: 100%;
-  min-height: 100vh;
-  display: block; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-clr);
+  color: var(--heading1-clr);
+  font-family: var(--text);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
