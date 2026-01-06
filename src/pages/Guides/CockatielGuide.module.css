@@ -2,6 +2,7 @@
   background-color: var(--heading1-clr);
   min-height: 100vh;
   padding: 40px 20px;
+  max-width: 1200px;
 }
 
 .pageContainer {

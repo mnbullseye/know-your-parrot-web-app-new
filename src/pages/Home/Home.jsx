@@ -112,6 +112,7 @@ const Home = () => {
         <h2 className={styles.shopNowText}>Shop Now</h2>
       </Link>
       <p>From toys to treats — keep your bird chirpy and chic!</p>
+      
     </div>
   </div>
 </section>
